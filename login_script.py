@@ -20,7 +20,7 @@ def login_koyeb(email, password):
         page = browser.new_page()
 
         # 访问登录页面
-        page.goto("https://client.webhostmost.com/login")
+        page.goto("https://web.freecloud.ltd/index.php?rp=/login")
 
         # 输入邮箱和密码
         page.get_by_placeholder("Enter email").click()
