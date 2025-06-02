@@ -41,7 +41,7 @@ def login_koyeb(email, password):
         except:
             # 如果没有找到错误消息,检查是否已经跳转到仪表板页面
             try:
-                page.wait_for_url("https://client.webhostmost.com/clientarea.php", timeout=5000)
+                page.wait_for_url("https://web.freecloud.ltd/clientarea.php", timeout=5000)
                 return f"账号 {email} 登录成功!"
             except:
                 return f"账号 {email} 登录失败: 未能跳转到仪表板页面"
@@ -59,7 +59,7 @@ if __name__ == "__main__":
         print(status)
 
     if login_statuses:
-        message = "WEBHOST登录状态:\n\n" + "\n".join(login_statuses)
+        message = "FreeCloud登录状态:\n\n" + "\n".join(login_statuses)
         result = send_telegram_message(message)
         print("消息已发送到Telegram:", result)
     else:
