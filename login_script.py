@@ -29,7 +29,7 @@ def login_koyeb(email, password):
         page.get_by_placeholder("密码").fill(password)
     
         # 点击登录按钮
-        page.get_by_role("button", name="Login").click()
+        page.get_by_role("button", name="登录").click()
 
         # 等待可能出现的错误消息或成功登录后的页面
         try:
